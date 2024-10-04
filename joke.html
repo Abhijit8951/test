@@ -3,9 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Generate Random Jokes</title>
+    <link rel="stylesheet" href="joke.css">
 </head>
 <body>
-    
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <div class="container">
+        <div>
+            <h2>Generate Random Joke</h2>
+            <div class="subtext">
+                <p>Get Your Daily Dose of Laughter with Random Jokes from Our API</p>
+            </div>
+            <div class="fact">
+                <p id="joke"></p>
+            </div>
+            <button class="button-8" role="button" id="btn">Get Joke</button>
+        </div>
+    </div>
+    <script src="joke.js"></script>
 </body>
 </html>
