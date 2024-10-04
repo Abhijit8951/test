@@ -1,4 +1,4 @@
-let factPara = document.querySelector("#para");
+let factPara = document.querySelector("#fact");
 let btn = document.querySelector("#btn");
 
 let url = "https://catfact.ninja/fact";

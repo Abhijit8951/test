@@ -31,6 +31,12 @@ body {
     margin-top: 25px;
 }
 
+.fact {
+    height: 50px;
+    width: 90%;
+    margin: auto;
+}
+
 .button-8 {
     background-color: #e1ecf4;
     border-radius: 3px;
