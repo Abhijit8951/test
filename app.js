@@ -8,7 +8,7 @@ async function getfacts() {
         let res = await axios.get(url);
         factPara.innerText = res.data.fact;
     } catch(e) {
-        factPara.innerText = "Error occured."
+        factPara.innerText = "Error occured." + e;
     }
 }
 
