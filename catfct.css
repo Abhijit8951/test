@@ -1,3 +1,15 @@
+body {
+    overflow-x: hidden;
+    font-family: sans-serif;
+    background-color: #eaeae2;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
 .container > div {
     border: 1px solid black;
     border-radius: 10%;
@@ -32,7 +44,7 @@
     font-size: 13px;
     font-weight: 400;
     line-height: 1.15385;
-    margin: 0;
+    margin-top: 280px;
     outline: none;
     padding: 8px .8em;
     position: relative;
