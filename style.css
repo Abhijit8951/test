@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -10,50 +11,110 @@ body {
 }
 
 .nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    justify-content: center;
-    margin: 10px 0;
     background-color: #ada7c9;
     height: 70px;
     width: 100vw;
+    display: flex;
+    align-items: center;
+}
+
+.nav nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    width: 100%;
 }
 
 .nav h2 {
-    margin: 5px;
-    float: left;
+    margin: 0;
+    font-size: 24px;
 }
 
 .nav ul {
     display: flex;
-    flex-direction: row;
-    margin-left: 1090px;
-    flex-shrink: 1;
-    
+    list-style: none;
+    margin-left: auto;
 }
 
-nav ul li {
-    display: flex;
-    align-items: center;
-    margin: auto;
-    list-style-type: none;
+.nav ul.active {
+    display: block;
 }
 
-nav ul li a {
-    width: 70px;
-    height: 20px;
-    margin: 5px;
-    padding: 5px;
+.nav ul li {
+    margin-left: 20px;
+}
+
+.nav ul li a {
     text-decoration: none;
     color: black;
-    border-radius: 10px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
 
-    &:hover {
-        background-color: #bc92b9;
-        
+.nav ul li a:hover {
+    background-color: #bc92b9;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    height: 3px;
+    width: 25px;
+    background-color: #333;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background-color: #ada7c9;
+        text-align: center;
+    }
+
+    .nav ul li {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .nav ul li a {
+        display: block;
+        padding: 15px 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
     }
 }
+
+.menu-toggle.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
 
 .msg {
     font-family: monospace;
