@@ -80,7 +80,7 @@ body {
     color: #2c5777;
   }
 
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
     .container {
         margin-top: 50px;
     }
@@ -91,7 +91,7 @@ body {
     }
 
     .button-8 {
-        margin-top: 100px;
+        margin-top: 150px;
     }
 }
 
